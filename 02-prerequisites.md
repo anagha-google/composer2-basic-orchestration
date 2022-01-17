@@ -443,7 +443,7 @@ gcloud composer environments create ${COMPOSER_ENV_NM} \
 Once the environment is available (takes 30 minutes), browse through all the UIs of Cloud Composer as well as the Airflow UI.
 
 
-## 13. Clone this hands on lab's git repo
+## 13. Clone this hands-on-lab's git repo
 
 In cloud shell, clone the repo-
 ```
