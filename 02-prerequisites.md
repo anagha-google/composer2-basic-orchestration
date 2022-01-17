@@ -321,7 +321,7 @@ gcloud iam service-accounts add-iam-policy-binding \
 <hr style="border:12px solid gray"> </hr>
 <br>
 
-## 8.Grant IAM Permissions specific to Cloud Composer
+## 8. Grant IAM Permissions specific to Cloud Composer
 
 ### 8.a. Cloud Composer Administrator role for UMSA
 
