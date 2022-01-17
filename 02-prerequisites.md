@@ -414,4 +414,24 @@ gcloud projects add-iam-policy-binding $PROJECT_ID --member=serviceAccount:$UMSA
 <hr style="border:12px solid gray"> </hr>
 <br>
 
-This concludes this module.
+
+## 12. Provision Composer 2, impersonating the UMSA identity
+
+Takes abour 30 minutes..
+```
+gcloud composer environments create ${COMPOSER_ENV_NM} \
+--location ${LOCATION} \
+--labels env=dev,purpose=kicking-tires \
+--network ${VPC} \
+--subnetwork ${COMPOSER_SNET} \
+--image-version "composer-2.0.0-airflow-2.1.4" \
+--service-account ${UMSA_FQN}
+```
+
+Once the environment is available (takes 30 minutes), browse through all the UIs of Cloud Composer as well as the Airflow UI.
+
+
+## 13. What's next?
+
+In the next module, we will create a basic "Hello World" DAG to validate if our Composer environment is functional.
+
