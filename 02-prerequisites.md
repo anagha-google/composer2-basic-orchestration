@@ -5,8 +5,27 @@ This module includes all prerequisites for the orchesration lab-
 2. IAM permissions
 ...
 
+## 1. Declare varibles 
 
-## 1. Enable Google APIs
+We will use these throughout the lab. Run the below-
+```
+PROJECT_ID=composer-2-playground
+PROJECT_NUMBER=914583619622
+
+UMSA="agni-sa"
+UMSA_FQN=$UMSA@$PROJECT_ID.iam.gserviceaccount.com
+ADMIN_FQ_UPN="admin@akhanolkar.altostrat.com" # Replace with your admin UPN
+
+
+VPC_NM=composer-2-vnet
+VPC_FQN=projects/$PROJECT_ID/global/networks/$VPC_NM
+SUBNET_NM=composer-2-snet
+
+REGION=us-central1
+```
+
+
+## 2. Enable Google APIs
 
 From cloud shell, run the below-
 ```
@@ -25,16 +44,16 @@ gcloud services enable pubsub.googleapis.com
 gcloud services enable dataflow.googleapis.com
 ```
 
-## 2. Create a VPC, a subnet, firewall rules
+## 3. Create a VPC, a subnet, firewall rules
 
 Launch cloud shell, change scope to the project you created (if required), and run the commands below to create the networking entities required for the hands on lab.
 
 
-#### 2.1. Create a VPC
+#### 3.1. Create a VPC
 
 a) Create the network
 ```
-gcloud compute networks create indra-vpc \
+gcloud compute networks create $VPC_NM \
     --subnet-mode=custom \
     --bgp-routing-mode=regional \
     --mtu=1500
@@ -47,56 +66,46 @@ gcloud compute networks list
 
 c) Describe your network with:
 ```
-gcloud compute networks describe indra-vpc
+gcloud compute networks describe $VPC_NM
 ```
 
-#### 2.2. Create a subnet for composer
+#### 3.2. Create a subnet for composer
 
 a) Create subnet for Composer2
 ```
-gcloud compute networks subnets create indra-composer2-snet \
-     --network=indra-vpc \
+gcloud compute networks subnets create $SUBNET_NM \
+     --network=$VPC_NM \
      --range=10.0.0.0/24 \
      --region=us-central1 \
      --enable-private-ip-google-access
 ```
 
+#### 3.3. Create firewall rules
 a) Intra-VPC, allow all communication
 
 ```
-gcloud compute firewall-rules create allow-all-intra-vpc --project=e2e-demo-indra --network="projects/e2e-demo-indra/global/networks/indra-vpc" --description="Allows\ connection\ from\ any\ source\ to\ any\ instance\ on\ the\ network\ using\ custom\ protocols." --direction=INGRESS --priority=65534 --source-ranges=10.0.0.0/20 --action=ALLOW --rules=all
+gcloud compute firewall-rules create allow-all-intra-vpc --project=$PROJECT_ID --network=$VPC_FQN --description="Allows\ connection\ from\ any\ source\ to\ any\ instance\ on\ the\ network\ using\ custom\ protocols." --direction=INGRESS --priority=65534 --source-ranges=10.0.0.0/20 --action=ALLOW --rules=all
 ```
 
 b) Allow SSH
 
 ```
-gcloud compute firewall-rules create allow-all-ssh --project=e2e-demo-indra --network="projects/e2e-demo-indra/global/networks/indra-vpc" --description="Allows\ TCP\ connections\ from\ any\ source\ to\ any\ instance\ on\ the\ network\ using\ port\ 22." --direction=INGRESS --priority=65534 --source-ranges=0.0.0.0/0 --action=ALLOW --rules=tcp:22
+gcloud compute firewall-rules create allow-all-ssh --project=$PROJECT_ID --network=$VPC_FQN --description="Allows\ TCP\ connections\ from\ any\ source\ to\ any\ instance\ on\ the\ network\ using\ port\ 22." --direction=INGRESS --priority=65534 --source-ranges=0.0.0.0/0 --action=ALLOW --rules=tcp:22
 ```
 
 c) Create a firewall rule to allow yourself to ingress
 
 Replace with your IP address below-
 ```
-gcloud compute --project=e2e-demo-indra firewall-rules create allow-all-to-my-machine --direction=INGRESS --priority=1000 --network=indra-vpc --action=ALLOW --rules=all --source-ranges=xx.xxx.xx.xx
+gcloud compute --project=$PROJECT_ID firewall-rules create allow-all-to-my-machine --direction=INGRESS --priority=1000 --network=$VPC_NM --action=ALLOW --rules=all --source-ranges=xx.xxx.xx.xx
 ```
-
-d) Validate in Cloud Console
-
-![FIREWALL](../01-images/00-03-firewall.png)
-<br>
-
-<hr style="border:12px solid gray"> </hr>
-<br>
 
 ## 5. Implement organizational policies
 
 Applicable for Google Customer Engineers working in Argolis-
 
-a) Create variables for use further in the rest of project in cloud shell
-
-```
-PROJECT_ID=e2e-demo-indra
-```
+a) Create variables for use further in the rest of project in cloud shell<br>
+Covered in section 1.0
 
 b) Relax require OS Login
 ```
@@ -253,10 +262,7 @@ spec:
 ## 6. Create a Service Account
 
 ```
-PROJECT_NUMBER=914583619622
-PROJECT_ID=e2e-demo-indra
-UMSA="indra-sa"
-ADMIN_FQ_UPN="admin@akhanolkar.altostrat.com" # Replace with your Argolis UPN
+
 
 gcloud iam service-accounts create ${UMSA} \
     --description="User Managed Service Account for the Indra E2E Project" \
@@ -273,14 +279,7 @@ gcloud iam service-accounts create ${UMSA} \
 
 ## 7. Grant IAM Permissions 
 
-The variables if you have not already run these commands-
-```
-PROJECT_NUMBER=914583619622
-PROJECT_ID=e2e-demo-indra
-UMSA="indra-sa"
-UMSA_FQN=$UMSA@$PROJECT_ID.iam.gserviceaccount.com
-ADMIN_FQ_UPN="admin@akhanolkar.altostrat.com" # Replace with your Argolis UPN
-```
+
 
 ### 7.1. Permissions specific to UMSA
 
