@@ -1,8 +1,9 @@
 # About
 
 This module includes all prerequisites for the orchesration lab-
-1. Service account creation
-2. IAM permissions
+1. Declare variables
+2. [Enable Google APIs](02-prerequisites.md#2-enable-google-apis)
+3. Create a VPC & a subnet(02-prerequisites.md#3-create-a-vpc--a-subnet)
 ...
 
 ## 1. Declare varibles 
