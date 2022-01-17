@@ -76,7 +76,7 @@ a) Create subnet for Composer2
 gcloud compute networks subnets create $SUBNET_NM \
      --network=$VPC_NM \
      --range=10.0.0.0/24 \
-     --region=us-central1 \
+     --region=$REGION \
      --enable-private-ip-google-access
 ```
 
