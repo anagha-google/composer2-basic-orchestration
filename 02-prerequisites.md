@@ -44,14 +44,14 @@ gcloud services enable pubsub.googleapis.com
 gcloud services enable dataflow.googleapis.com
 ```
 
-## 3. Create a VPC, a subnet, firewall rules
+## 3. Create a VPC & a subnet
 
 Launch cloud shell, change scope to the project you created (if required), and run the commands below to create the networking entities required for the hands on lab.
 
 
 #### 3.1. Create a VPC
 
-a) Create the network
+
 ```
 gcloud compute networks create $VPC_NM \
     --subnet-mode=custom \
@@ -71,7 +71,7 @@ gcloud compute networks describe $VPC_NM
 
 #### 3.2. Create a subnet for composer
 
-a) Create subnet for Composer2
+
 ```
 gcloud compute networks subnets create $SUBNET_NM \
      --network=$VPC_NM \
@@ -80,7 +80,7 @@ gcloud compute networks subnets create $SUBNET_NM \
      --enable-private-ip-google-access
 ```
 
-#### 3.3. Create firewall rules
+## 4. Create firewall rules
 a) Intra-VPC, allow all communication
 
 ```
@@ -102,12 +102,14 @@ gcloud compute --project=$PROJECT_ID firewall-rules create allow-all-to-my-machi
 
 ## 5. Implement organizational policies
 
-Applicable for Google Customer Engineers working in Argolis; Modify/Apply/may not apply for your environment - check with your administrator.
+Applicable for Google Customer Engineers working in Argolis for this hands on lab.<br>
+Modify/Apply/may not apply for your environment - check with your administrator.
 
-a) Create variables for use further in the rest of project in cloud shell<br>
+
+### 5.1.  Create variables for use further in the rest of project in cloud shell
 Covered in section 1.0
 
-b) Relax require OS Login
+### 5.2. Relax require OS Login
 ```
 rm os_login.yaml
 
@@ -123,7 +125,7 @@ gcloud org-policies set-policy os_login.yaml
 rm os_login.yaml
 ```
 
-c) Disable Serial Port Logging
+### 5.3. Disable Serial Port Logging
 
 ```
 
@@ -141,8 +143,7 @@ gcloud org-policies set-policy disableSerialPortLogging.yaml
 rm disableSerialPortLogging.yaml
 
 ```
-
-d) Disable Shielded VM requirement
+### 5.4. Disable Shielded VM requirement
 
 ```
 
@@ -161,7 +162,7 @@ rm shieldedVm.yaml
 
 ```
 
-e) Disable VM can IP forward requirement
+### 5.5. Disable VM can IP forward requirement
 
 ```
 rm vmCanIpForward.yaml
@@ -179,7 +180,7 @@ rm vmCanIpForward.yaml
 
 ```
 
-f) Enable VM external access 
+### 5.6. Enable VM external access 
 
 ```
 
@@ -198,7 +199,7 @@ rm vmExternalIpAccess.yaml
 
 ```
 
-g) Enable restrict VPC peering
+### 5.7. Enable restrict VPC peering
 
 ```
 rm restrictVpcPeering.yaml
@@ -217,7 +218,7 @@ rm restrictVpcPeering.yaml
 ```
 
 
-h) Configure ingress settings for Cloud Functions
+### 5.8. Configure ingress settings for Cloud Functions
 
 ```
 rm gcf-ingress-settings.yaml
@@ -236,7 +237,7 @@ rm gcf-ingress-settings.yaml
 
 ```
 
-i) Validation<br>
+### 5.9. Validation
 To describe a particular constratint, run like the below describes the constraint for cloud function ingress setting for the author's project-
 ```
 gcloud org-policies describe \
@@ -304,6 +305,8 @@ gcloud iam service-accounts add-iam-policy-binding \
     --role="roles/iam.serviceAccountUser"
 ```
 
+<hr style="border:12px solid gray"> </hr>
+<br>
 
 ## 8. Permissions specific to Cloud Composer
 
@@ -395,6 +398,9 @@ b) To Dataflow developer
 gcloud projects add-iam-policy-binding ${PROJECT_ID} --member=serviceAccount:$UMSA_FQN --role=roles/dataflow.worker
 ``` 
 
+<hr style="border:12px solid gray"> </hr>
+<br>
+
 ## 11. Permissions specific to Cloud Storage
 
 ### 11.1. Permissions for UMSA to read from GCS
@@ -403,3 +409,8 @@ a) ObjectViewer
 ```
 gcloud projects add-iam-policy-binding $PROJECT_ID --member=serviceAccount:$UMSA_FQN --role="roles/storage.objectViewer"
 ```
+
+<hr style="border:12px solid gray"> </hr>
+<br>
+
+This concludes this module.
