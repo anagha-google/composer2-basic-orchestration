@@ -376,7 +376,7 @@ gcloud projects add-iam-policy-binding ${PROJECT_ID} \
 <br>
 
 
-## 9. Permissions specific to Cloud Functions
+## 9. Grant IAM Permissions specific to Cloud Functions
 
 ### 9.1. Permissions specific to UMSA
 
@@ -397,7 +397,7 @@ gcloud projects add-iam-policy-binding ${PROJECT_ID} --member=serviceAccount:$UM
 <br>
 
 
-## 10. Permissions specific to Cloud Dataflow
+## 10. Grant IAM Permissions specific to Cloud Dataflow
 
 ### 10.1. Permissions for UMSA to spawn Cloud Dataflow pipelines
 
@@ -414,7 +414,7 @@ gcloud projects add-iam-policy-binding ${PROJECT_ID} --member=serviceAccount:$UM
 <hr style="border:12px solid gray"> </hr>
 <br>
 
-## 11. Permissions specific to Cloud Storage
+## 11. Grant IAM Permissions specific to Cloud Storage
 
 ### 11.1. Permissions for UMSA to read from GCS
 
@@ -427,7 +427,7 @@ gcloud projects add-iam-policy-binding $PROJECT_ID --member=serviceAccount:$UMSA
 <br>
 
 
-## 12. Provision Composer 2, impersonating the UMSA identity
+## 12. Provision Clone Composer 2, impersonating the UMSA identity
 
 Takes abour 30 minutes..
 ```
@@ -443,7 +443,7 @@ gcloud composer environments create ${COMPOSER_ENV_NM} \
 Once the environment is available (takes 30 minutes), browse through all the UIs of Cloud Composer as well as the Airflow UI.
 
 
-## 13. Clone the hands on lab's git repo
+## 13. Clone this hands on lab's git repo
 
 In cloud shell, clone the repo-
 ```
