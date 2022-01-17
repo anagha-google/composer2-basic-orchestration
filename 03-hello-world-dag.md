@@ -48,12 +48,15 @@ gcloud composer environments storage dags import \
 --environment $COMPOSER_ENV_NM  --location $LOCATION \
 --source hello-world-dag.py 
 ```
+
+This will copy the DAG Python script to the Cloud Composer GCS DAG bucket, and will get imported and execute immediately (as per the code).
+
 ## 4. Switch to the Cloud Composer Airflow Web UI and execute the DAG and check results
 
 The deployment automatically launches a DAG.
 Navigate to the DAG run and go to logs, you shuld see something like this-
 ```
-
+INFO - Hello World!, DAG run ID =  2
 ```
 
 
