@@ -10,7 +10,7 @@ This module includes all prerequisites for the orchesration lab-
 We will use these throughout the lab. Run the below-
 ```
 PROJECT_ID=composer-2-playground
-PROJECT_NUMBER=914583619622
+PROJECT_NUMBER=508201578739 # Replace with yur project number
 
 UMSA="agni-sa"
 UMSA_FQN=$UMSA@$PROJECT_ID.iam.gserviceaccount.com
