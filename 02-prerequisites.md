@@ -9,11 +9,11 @@ This module includes all prerequisites for the orchesration lab-<br>
 [6. Create a User Managed Service Account](02-prerequisites.md#6-create-a-user-managed-service-account)<br>
 [7. Grant general IAM permissions](02-prerequisites.md#7-grant-general-iam-permissions)<br>
 [8. Grant IAM permissions specific to Cloud Composer](02-prerequisites.md#8-grant-iam-permissions-specific-to-cloud-composer)<br>
-[9. ]()<br>
-[10. ]()<br>
-[11. ]()<br>
-[12. ]()<br>
-[13. ]()<br>
+[9. Grant IAM Permissions specific to Cloud Functions](02-prerequisites.md#9-grant-iam-permissions-specific-to-cloud-functions)<br>
+[10. Grant IAM Permissions specific to Cloud Dataflow](02-prerequisites.md#10-grant-iam-permissions-specific-to-cloud-dataflow)<br>
+[11. Grant IAM Permissions specific to Cloud Storage](02-prerequisites.md#11-grant-iam-permissions-specific-to-cloud-storage)<br>
+[12. Provision Clone Composer 2, impersonating the UMSA identity](02-prerequisites.md#12-provision-clone-composer-2-impersonating-the-umsa-identity)<br>
+[13. Clone this hands-on-lab's git repo](02-prerequisites.md#13-clone-this-hands-on-labs-git-repo)<br>
 ...
 
 ## 1. Declare varibles 
@@ -443,7 +443,7 @@ gcloud composer environments create ${COMPOSER_ENV_NM} \
 Once the environment is available (takes 30 minutes), browse through all the UIs of Cloud Composer as well as the Airflow UI.
 
 
-## 13. Clone this hands-on-lab's git repo
+## 13. Clone this hands on lab's git repo
 
 In cloud shell, clone the repo-
 ```
