@@ -50,6 +50,11 @@ gcloud composer environments storage dags import \
 ```
 ## 4. Switch to the Cloud Composer Airflow Web UI and execute the DAG and check results
 
+The deployment automatically launches a DAG.
+Navigate to the DAG run and go to logs, you shuld see something like this-
+```
+
+```
 
 
 ## 5. What's next?
