@@ -1,19 +1,19 @@
 # About
 
-This module includes all prerequisites for the orchesration lab-
-1. Declare variables
-2. [Enable Google APIs](02-prerequisites.md#2-enable-google-apis)
-3. [Create a VPC & a subnet](02-prerequisites.md#3-create-a-vpc--a-subnet)
-4. [Create firewall rules](02-prerequisites.md#4-create-firewall-rules)
-5. [Implement organizational policies](02-prerequisites.md#5-implement-organizational-policies)
-6. [Create a User Managed Service Account](02-prerequisites.md#6-create-a-user-managed-service-account)
-7. [Grant general IAM permissions](02-prerequisites.md#7-grant-general-iam-permissions)
-8. [Grant IAM permissions specific to Cloud Composer](02-prerequisites.md#8-grant-iam-permissions-specific-to-cloud-composer)
-9. []()
-10. []()
-11. []()
-12. []()
-13. []()
+This module includes all prerequisites for the orchesration lab-<br>
+[1. Declare variables]()<br>
+[2. Enable Google APIs](02-prerequisites.md#2-enable-google-apis)<br>
+[3. Create a VPC & a subnet](02-prerequisites.md#3-create-a-vpc--a-subnet)<br>
+[4. Create firewall rules](02-prerequisites.md#4-create-firewall-rules)<br>
+[5. Implement organizational policies](02-prerequisites.md#5-implement-organizational-policies)<br>
+[6. Create a User Managed Service Account](02-prerequisites.md#6-create-a-user-managed-service-account)<br>
+[7. Grant general IAM permissions](02-prerequisites.md#7-grant-general-iam-permissions)<br>
+[8. Grant IAM permissions specific to Cloud Composer](02-prerequisites.md#8-grant-iam-permissions-specific-to-cloud-composer)<br>
+[9. ]()<br>
+[10. ]()<br>
+[11. ]()<br>
+[12. ]()<br>
+[13. ]()<br>
 ...
 
 ## 1. Declare varibles 
