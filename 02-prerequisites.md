@@ -277,7 +277,7 @@ gcloud iam service-accounts create ${UMSA} \
 <br>
 
 
-## 7. Grant IAM Permissions 
+## 7. Grant general IAM Permissions 
 
 ### 7.1. Permissions specific to UMSA
 
@@ -298,7 +298,7 @@ gcloud projects add-iam-policy-binding ${PROJECT_ID} \
     --role=roles/iam.serviceAccountTokenCreator  
 ```
 
-### 7.2. Permissions specific to UMSA
+### 7.2. Permissions specific to the lab attendee
 
 ### 7.2.a. Permission for lab attendee to operate as the UMSA
 
@@ -312,7 +312,7 @@ gcloud iam service-accounts add-iam-policy-binding \
 <hr style="border:12px solid gray"> </hr>
 <br>
 
-## 8. Permissions specific to Cloud Composer
+## 8. Grant IAM Permissions specific to Cloud Composer
 
 ### 8.a. Cloud Composer Administrator role for UMSA
 
