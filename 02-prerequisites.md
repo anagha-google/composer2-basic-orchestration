@@ -102,7 +102,7 @@ gcloud compute --project=$PROJECT_ID firewall-rules create allow-all-to-my-machi
 
 ## 5. Implement organizational policies
 
-Applicable for Google Customer Engineers working in Argolis-
+Applicable for Google Customer Engineers working in Argolis; Modify/Apply/may not apply for your environment - check with your administrator.
 
 a) Create variables for use further in the rest of project in cloud shell<br>
 Covered in section 1.0
@@ -240,7 +240,7 @@ i) Validation<br>
 To describe a particular constratint, run like the below describes the constraint for cloud function ingress setting for the author's project-
 ```
 gcloud org-policies describe \
-cloudfunctions.allowedIngressSettings --project=e2e-demo-indra
+cloudfunctions.allowedIngressSettings --project=$PROJECT_ID
 ```
 
 Author's output:
@@ -262,24 +262,17 @@ spec:
 ## 6. Create a Service Account
 
 ```
-
-
 gcloud iam service-accounts create ${UMSA} \
-    --description="User Managed Service Account for the Indra E2E Project" \
+    --description="User Managed Service Account for the Composer-2-Playground project" \
     --display-name=$UMSA 
 ```
 
-![UMSA-4](../01-images/00-04-UMSA-nav.png)
-<br>
-![UMSA-5](../01-images/00-05-UMSA.png)
-<br>
+
 <hr style="border:12px solid gray"> </hr>
 <br>
 
 
 ## 7. Grant IAM Permissions 
-
-
 
 ### 7.1. Permissions specific to UMSA
 
@@ -291,7 +284,6 @@ gcloud projects add-iam-policy-binding ${PROJECT_ID} \
     --role=roles/iam.serviceAccountUser   
 ```
 
-![UMSA-5](../01-images/00-05-UMSA.png)
 
 #### 7.1.b. Service Account Token Creator role for UMSA
 
@@ -300,8 +292,6 @@ gcloud projects add-iam-policy-binding ${PROJECT_ID} \
     --member=serviceAccount:${UMSA_FQN} \
     --role=roles/iam.serviceAccountTokenCreator  
 ```
-
-<br>
 
 ### 7.2. Permissions specific to UMSA
 
@@ -314,8 +304,6 @@ gcloud iam service-accounts add-iam-policy-binding \
     --role="roles/iam.serviceAccountUser"
 ```
 
-
-![UMSA-6](../01-images/00-06-UMSA-ActAs.png)
 
 ## 8. Permissions specific to Cloud Composer
 
@@ -387,7 +375,6 @@ gcloud projects add-iam-policy-binding ${PROJECT_ID} --member=serviceAccount:$UM
 ```
 gcloud projects add-iam-policy-binding ${PROJECT_ID} --member=serviceAccount:$UMSA_FQN --role=roles/cloudfunctions.admin
 ```
-
 
 <hr style="border:12px solid gray"> </hr>
 <br>
