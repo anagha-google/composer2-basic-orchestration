@@ -3,7 +3,8 @@
 This module includes all prerequisites for the orchesration lab-
 1. Declare variables
 2. [Enable Google APIs](02-prerequisites.md#2-enable-google-apis)
-3. Create a VPC & a subnet(02-prerequisites.md#3-create-a-vpc--a-subnet)
+3. [Create a VPC & a subnet](02-prerequisites.md#3-create-a-vpc--a-subnet)
+4. [Create firewall rules]()
 ...
 
 ## 1. Declare varibles 
@@ -23,6 +24,8 @@ VPC_FQN=projects/$PROJECT_ID/global/networks/$VPC_NM
 SUBNET_NM=composer-2-snet
 
 REGION=us-central1
+
+COMPOSER_ENV_NM=cc2-agni
 ```
 
 
@@ -420,10 +423,10 @@ gcloud projects add-iam-policy-binding $PROJECT_ID --member=serviceAccount:$UMSA
 Takes abour 30 minutes..
 ```
 gcloud composer environments create ${COMPOSER_ENV_NM} \
---location ${LOCATION} \
+--location ${REGION} \
 --labels env=dev,purpose=kicking-tires \
---network ${VPC} \
---subnetwork ${COMPOSER_SNET} \
+--network ${VPC_NM} \
+--subnetwork ${SUBNET_NM} \
 --image-version "composer-2.0.0-airflow-2.1.4" \
 --service-account ${UMSA_FQN}
 ```
@@ -431,7 +434,14 @@ gcloud composer environments create ${COMPOSER_ENV_NM} \
 Once the environment is available (takes 30 minutes), browse through all the UIs of Cloud Composer as well as the Airflow UI.
 
 
-## 13. What's next?
+## 13. Clone the hands on lab's git repo
+
+In cloud shell, clone the repo-
+```
+git clone https://github.com/anagha-google/composer2-basic-orchestration.git
+```
+
+## 14. What's next?
 
 In the next module, we will create a basic "Hello World" DAG to validate if our Composer environment is functional.
 
