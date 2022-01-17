@@ -4,7 +4,16 @@ This module includes all prerequisites for the orchesration lab-
 1. Declare variables
 2. [Enable Google APIs](02-prerequisites.md#2-enable-google-apis)
 3. [Create a VPC & a subnet](02-prerequisites.md#3-create-a-vpc--a-subnet)
-4. [Create firewall rules]()
+4. [Create firewall rules](02-prerequisites.md#4-create-firewall-rules)
+5. [Implement organizational policies](02-prerequisites.md#5-implement-organizational-policies)
+6. [Create a User Managed Service Account](02-prerequisites.md#6-create-a-user-managed-service-account)
+7. [Grant general IAM permissions](02-prerequisites.md#7-grant-general-iam-permissions)
+8. [Grant IAM permissions specific to Cloud Composer](02-prerequisites.md#8-grant-iam-permissions-specific-to-cloud-composer)
+9. []()
+10. []()
+11. []()
+12. []()
+13. []()
 ...
 
 ## 1. Declare varibles 
@@ -264,7 +273,7 @@ spec:
 <hr style="border:12px solid gray"> </hr>
 <br>
 
-## 6. Create a User Managed Service Account
+## 6. Create a Service Account
 
 ```
 gcloud iam service-accounts create ${UMSA} \
@@ -277,7 +286,7 @@ gcloud iam service-accounts create ${UMSA} \
 <br>
 
 
-## 7. Grant general IAM Permissions 
+## 7. Grant IAM Permissions 
 
 ### 7.1. Permissions specific to UMSA
 
@@ -298,7 +307,7 @@ gcloud projects add-iam-policy-binding ${PROJECT_ID} \
     --role=roles/iam.serviceAccountTokenCreator  
 ```
 
-### 7.2. Permissions specific to the lab attendee
+### 7.2. Permissions specific to UMSA
 
 ### 7.2.a. Permission for lab attendee to operate as the UMSA
 
@@ -312,7 +321,7 @@ gcloud iam service-accounts add-iam-policy-binding \
 <hr style="border:12px solid gray"> </hr>
 <br>
 
-## 8. Grant IAM Permissions specific to Cloud Composer
+## 8. Permissions specific to Cloud Composer
 
 ### 8.a. Cloud Composer Administrator role for UMSA
 
