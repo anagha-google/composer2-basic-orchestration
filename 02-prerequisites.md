@@ -17,8 +17,10 @@ This module includes all prerequisites for the orchesration lab-<br>
 ...
 
 ## 0. Prerequisites
-Create a project called "composer-2-playground".<br>
+1. Create a project called "composer-2-playground".<br>
 Note the project number.
+2. Grant yourself security admin role<br>
+This is needed for the networking setup
 
 
 ## 1. Declare varibles 
@@ -27,7 +29,6 @@ We will use these throughout the lab. <br>
 Run the below in cloud shells coped to the new project you created-
 ```
 PROJECT_ID=composer-2-playground
-PROJECT_NUMBER=508201578739 # Replace with yur project number
 
 UMSA="agni-sa"
 UMSA_FQN=$UMSA@$PROJECT_ID.iam.gserviceaccount.com
@@ -41,6 +42,7 @@ REGION=us-central1
 COMPOSER_ENV_NM=cc2-agni
 
 ADMIN_FQ_UPN="admin@akhanolkar.altostrat.com" # Replace with your admin UPN
+PROJECT_NUMBER=508201578739 # Replace with yur project number
 ```
 
 
