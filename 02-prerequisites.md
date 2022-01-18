@@ -433,8 +433,23 @@ gcloud projects add-iam-policy-binding $PROJECT_ID --member=serviceAccount:$UMSA
 <hr style="border:12px solid gray"> </hr>
 <br>
 
+## 12. Grant IAM Permissions specific to BigQuery
 
-## 12. Provision Clone Composer 2, impersonating the UMSA identity
+### 12.1. Permissions for UMSA to work with BigQuery
+
+a) ObjectViewer
+```
+gcloud projects add-iam-policy-binding $PROJECT_ID --member=serviceAccount:$UMSA_FQN --role="roles/bigquery.admin"
+
+
+gcloud projects add-iam-policy-binding $PROJECT_ID --member=serviceAccount:$UMSA_FQN --role="roles/bigquery.dataEditor"
+```
+
+<hr style="border:12px solid gray"> </hr>
+<br>
+
+
+## 13. Provision Clone Composer 2, impersonating the UMSA identity
 
 Takes abour 30 minutes..
 ```
@@ -450,14 +465,14 @@ gcloud composer environments create ${COMPOSER_ENV_NM} \
 Once the environment is available (takes 30 minutes), browse through all the UIs of Cloud Composer as well as the Airflow UI.
 
 
-## 13. Clone this hands-on-lab's git repo
+## 14. Clone this hands-on-lab's git repo
 
 In cloud shell, clone the repo-
 ```
 git clone https://github.com/anagha-google/composer2-basic-orchestration.git
 ```
 
-## 14. What's next?
+## 15. What's next?
 
 In the next module, we will create a basic "Hello World" DAG to validate if our Composer environment is functional.
 
