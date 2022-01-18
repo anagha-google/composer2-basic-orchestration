@@ -40,6 +40,7 @@ SUBNET_NM=composer-2-snet
 REGION=us-central1
 
 COMPOSER_ENV_NM=cc2-agni
+USE_PUBLIC_IPS=true
 
 DATAFLOW_SUBNET="https://www.googleapis.com/compute/v1/projects/$PROJECT_ID/regions/$LOCATION/subnetworks/$SUBNET_NM"
 
