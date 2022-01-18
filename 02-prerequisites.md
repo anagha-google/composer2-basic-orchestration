@@ -253,9 +253,9 @@ rm gcf-ingress-settings.yaml
  ### 5.9. Configure Service Account Key Creation
  Try this only in Development for quick testing; Prefer Workload Identity Federation over UMSA keys.
  ```
-rm restrictVpcPeering.yaml
+rm disableServiceAccountKeyCreation.yaml
 
-cat > restrictVpcPeering.yaml << ENDOFFILE
+cat > disableServiceAccountKeyCreation.yaml << ENDOFFILE
 name: projects/$PROJECT_ID/policies/compute.disableServiceAccountKeyCreation
 spec:
   rules:
