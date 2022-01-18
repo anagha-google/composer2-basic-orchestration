@@ -1,7 +1,7 @@
 # About
 
 This module includes all prerequisites for the orchesration lab-<br>
-[1. Declare variables]()<br>
+[1. Declare variables](02-prerequisites.md#1-declare-varibles)<br>
 [2. Enable Google APIs](02-prerequisites.md#2-enable-google-apis)<br>
 [3. Create a VPC & a subnet](02-prerequisites.md#3-create-a-vpc--a-subnet)<br>
 [4. Create firewall rules](02-prerequisites.md#4-create-firewall-rules)<br>
