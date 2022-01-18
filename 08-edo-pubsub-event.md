@@ -40,7 +40,7 @@ AIRFLOW_URI=`gcloud composer environments describe $COMPOSER_ENV_NM \
 
 In cloud shell, navigate to the scripts directory for the exercise-
 ```
-cd ~/e2e-demo-indra/03-Cloud-Composer2/01-hello-world-dag/00-scripts/3-dag-pubsub-orchestrated/
+cd ~/composer2-basic-orchestration/00-scripts/hello-world-dag/3-dag-pubsub-orchestrated/
 ```
 
 Open and review the script below-
