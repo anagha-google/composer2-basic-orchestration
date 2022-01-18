@@ -322,7 +322,7 @@ gcloud iam service-accounts add-iam-policy-binding \
 gcloud iam service-accounts add-iam-policy-binding \
     ${UMSA_FQN} \
     --member="user:${ADMIN_FQ_UPN}" \
-    --roles/iam.serviceAccountTokenCreator
+    --role="roles/iam.serviceAccountTokenCreator"
 ```
 
 <hr style="border:12px solid gray"> </hr>
