@@ -12,12 +12,18 @@ From cloud shell, run the commands below-
 a) The variables
 ```
 PROJECT_ID=composer-2-playground
+PROJECT_NUMBER=508201578739 # Replace with yur project number
+
 UMSA="agni-sa"
 UMSA_FQN=$UMSA@$PROJECT_ID.iam.gserviceaccount.com
-COMPOSER_ENV_NM=cc2-agni
-LOCATION=us-central1
+ADMIN_FQ_UPN="admin@akhanolkar.altostrat.com" # Replace with your admin UPN
 
-GCF_TRIGGER_BUCKET_FQN=gs://$PROJECT_ID-gcs-edo-bucket
+
+REGION=us-central1
+
+COMPOSER_ENV_NM=cc2-agni
+
+GCF_TRIGGER_BUCKET_FQN=gs://$PROJECT_ID-$PROJECT_NUMBER-gcs-edo-bucket
 
 DAG_ID=hello_world_dag
 ```
