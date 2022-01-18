@@ -6,7 +6,7 @@ This module covers creating a "Hello World" DAG, and executing the same, manuall
 To test if the Cloud Composer 2 environment is successfully provisioned.
 
 ## Prerequisites
-[Provisioning prerequisites](../02-prerequisites.md)<br>
+[Provisioning prerequisites](02-prerequisites.md)<br>
 
 ## References
 [GCP Documentation Reference](https://cloud.google.com/composer/docs/composer-2/quickstart)<br>
