@@ -2,12 +2,6 @@
 
 This module covers creating a "Hello World" DAG, and executing the same, manually, as the user managed service account created in the provisioning prerequisite module.<br>
 
-## Duration 
-~ 30 minutes or less
-
-## Skill Level
-Low
-
 ## Goal
 To test if the Cloud Composer 2 environment is successfully provisioned.
 
@@ -47,6 +41,7 @@ Run the below command to deploy the DAG
 gcloud composer environments storage dags import \
 --environment $COMPOSER_ENV_NM  --location $LOCATION \
 --source hello-world-dag.py 
+--service-account $UMSA_FQN
 ```
 
 This will copy the DAG Python script to the Cloud Composer GCS DAG bucket, and will get imported and execute immediately (as per the code).
@@ -58,7 +53,6 @@ Navigate to the DAG run and go to logs, you shuld see something like this-
 ```
 INFO - Hello World!, DAG run ID =  2
 ```
-
 
 ## 5. What's next?
 
