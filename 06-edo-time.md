@@ -27,7 +27,7 @@ default_args = {
 }
 ```
 
-3. Complete "Hello World" DAG
+#### 3. Complete "Hello World" DAG
 
 ```
 # Docs: https://cloud.google.com/composer/docs/composer-2/quickstart
