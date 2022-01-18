@@ -1,15 +1,19 @@
 # Orchestration Basics for Cloud Composer 2
 
-The repository contains instruction, code, configuration, input files for basic hands on experience with Cloud Composer 2. This is a community contribution. Please open an issue with any bugs you run into.
+The repository contains instructions, code, configuration & input files for basic hands on experience with Cloud Composer 2 and orchestrating DAGs impersonating a User Managed Service Account. This is a community contribution. Please open an issue for any bugs you run into.
 
 ### 1. Orchestrating Cloud Composer 2 DAGs
-There are various ways through which Cloud Composer 2 DAGs can be launched-
-1. Time scheduled
-2. Cloud Storage object event-driven
-3. Cloud Pub/Sub message event-driven 
-4. Direct code based call of Airflow stable REST API
 
-This repo includes samples that cover such orchestration, impersonating a user managed service account.<br>
+![Options](../09-images/00-Options.png)
+
+<br><br>
+
+![Recommended](../09-images/01-Recommended.png)
+
+<br><br>
+
+![Considerations](../09-images/02-Considerations.png)
+
 
 ### 2. Get started
 
