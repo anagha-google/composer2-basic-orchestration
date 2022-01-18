@@ -1,5 +1,7 @@
 # Orchestration Basics for Cloud Composer 2
 
+The repository contains instruction, code, configuration, input files for basic hands on experience with Cloud Composer 2. This is a community contribution. Please open an issue with any bugs you run into.
+
 ### 1. Orchestrating Cloud Composer 2 DAGs
 There are various ways through which Cloud Composer 2 DAGs can be launched-
 1. Time scheduled
