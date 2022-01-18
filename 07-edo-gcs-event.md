@@ -23,7 +23,7 @@ REGION=us-central1
 
 COMPOSER_ENV_NM=cc2-agni
 
-GCF_TRIGGER_BUCKET_FQN=gs://$PROJECT_ID-$PROJECT_NUMBER-gcs-edo-bucket
+GCF_TRIGGER_BUCKET_FQN=gs://$PROJECT_ID-$PROJECT_NUMBER-hw-gcs-edo-bucket
 
 DAG_ID=hello_world_dag
 ```
