@@ -10,8 +10,6 @@ Completion of prior modules.
 
 In Cloud Shell paste the below-
 ```
-
-
 PROJECT_ID=composer-2-playground
 PROJECT_NUMBER=508201578739 # Replace with yur project number
 
