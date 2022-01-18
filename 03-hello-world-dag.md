@@ -29,7 +29,7 @@ a) In cloud shell, navigate to the directory where the script is located
 cd ~/composer2-basic-orchestration/00-scripts/hello-world-dag/1-dag-base/
 ```
 
-b) Review the "Hello World DAG" Python script available [here - FIX ME](../00-scripts/hello-world-dag/1-dag-base/hello-world-dag.py)
+b) Review the "Hello World DAG" Python script available [here](00-scripts/hello-world-dag/1-dag-base/hello-world-dag.py)
 <br>
 The DAG merely displays the DAG run ID
 
