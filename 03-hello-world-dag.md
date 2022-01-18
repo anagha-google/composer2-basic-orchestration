@@ -40,7 +40,7 @@ Run the below command to deploy the DAG
 ```
 gcloud composer environments storage dags import \
 --environment $COMPOSER_ENV_NM  --location $LOCATION \
---source hello-world-dag.py 
+--source hello-world-dag.py \
 --service-account $UMSA_FQN
 ```
 
