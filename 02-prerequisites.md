@@ -256,7 +256,7 @@ rm gcf-ingress-settings.yaml
 rm disableServiceAccountKeyCreation.yaml
 
 cat > disableServiceAccountKeyCreation.yaml << ENDOFFILE
-name: projects/$PROJECT_ID/policies/compute.disableServiceAccountKeyCreation
+name: projects/$PROJECT_ID/policies/iam.disableServiceAccountKeyCreation
 spec:
   rules:
   - enforce: false
@@ -268,7 +268,7 @@ rm disableServiceAccountKeyCreation.yaml
 
 ```
  
- constraints/iam.disableServiceAccountKeyCreation
+
 
 ### 5.10. Validation
 To describe a particular constratint, run like the below describes the constraint for cloud function ingress setting for the author's project-
