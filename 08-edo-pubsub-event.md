@@ -16,13 +16,17 @@ DAG_ID=hello_world_dag
 PUB_SUB_TRIGGER_TOPIC=$PROJECT_ID-hw-edo-topic
 ```
 
-## 1.0. Create a Google Pub/Sub topic
+<hr>
+
+## 2.0. Create a Google Pub/Sub topic
 
 ```
 gcloud pubsub topics create $PUB_SUB_TRIGGER_TOPIC
 ```
 
-## 2.0. Get the Airflow Web URL
+<hr>
+
+## 3.0. Get the Airflow Web URL
 
 ```
 AIRFLOW_URI=`gcloud composer environments describe $COMPOSER_ENV_NM \
@@ -30,8 +34,9 @@ AIRFLOW_URI=`gcloud composer environments describe $COMPOSER_ENV_NM \
     --format='value(config.airflowUri)'`
 ```
 
+<hr>
 
-## 3.0. Review the Airflow DAG executor script
+## 4.0. Review the Airflow DAG executor script
 
 In cloud shell, navigate to the scripts directory for the exercise-
 ```
@@ -46,14 +51,18 @@ cat composer2_airflow_rest_api.py
 Do not change any variables.<br>
 The Cloud Function we will author, imports this file from the main.py file.
 
-## 4.0. Review the Python dependencies file
+<hr>
+
+## 5.0. Review the Python dependencies file
 
 Open and review the script below-
 ```
 cat requirements.txt
 ```
 
-## 5.0. Review the GCF main python file
+<hr>
+
+## 6.0. Review the GCF main python file
 
 Open and review the script below-
 ```
@@ -65,7 +74,9 @@ AIRFLOW_URI_TO_BE_REPLACED<br>
 and<br>
 DAG_ID_TO_BE_REPLACED<br>
 
-## 6.0. Update the GCF main python file
+<hr>
+
+## 7.0. Update the GCF main python file
 
 1. Replace WEB_SERVER_URL_TO_BE_REPLACED in main.py with your env specific value
 
@@ -85,14 +96,16 @@ cat main.py
 
 You should see the actual Airflow URI and the DAG ID
 
-## 7.0. Deploy the Google Cloud Function (GCF) to run as UMSA
+<hr>
+
+## 8.0. Deploy the Google Cloud Function (GCF) to run as UMSA
 
 Takes approximately 2 minutes.
 
 ```
 USE_EXPERIMENTAL_API='False'
 
-gcloud functions deploy composer_hello_world_pubsub_trigger_fn \
+gcloud functions deploy cc2_hello_world_pubsub_trigger_fn \
 --entry-point trigger_dag_gcf \
 --trigger-topic $PUB_SUB_TRIGGER_TOPIC \
 --runtime python39 \
@@ -101,55 +114,27 @@ gcloud functions deploy composer_hello_world_pubsub_trigger_fn \
 ```
 
 a) In the cloud console, navigate to Cloud Functions-
+<br>
+Validate successful deployment of the GCF
 
-![01-02-13](../../01-images/01-02-13.png)
-<br><br><br>
+<hr>
 
-b) Gp back to the Cloud Pub/Sub UI and notice that the deployment of the Pub/Sub topic triggered GCF created a Pub/Sub subscription
+## 9.0.Test the function from cloud shell
 
-![01-02-14](../../01-images/01-02-14.png)
-<br><br><br>
-
-
-
-## 8.0.Test the function from cloud shell
-
+1. Publish a message to Cloud Pub/Sub trigger topic
 ```
 CURRENT_TIME=`date -d "-6 hours"`
 gcloud pubsub topics publish $PUB_SUB_TRIGGER_TOPIC --message "$CURRENT_TIME"
 ```
 
-Go to the Cloud Function Logs, in the cloud console and check for errors..
+2. Go to the Cloud Function Logs, in the cloud console and check for errors..<br>
 
-![01-02-15](../../01-images/01-02-15.png)
+
+3. And then go to Airflow web UI and click on the DAG node, and look at the logs...<br>
+
+
+4. Publish multiple messages to the Pub/Sub topic and explore DAG runs in the Airflow UI...<br>
+You should see the number of runs incrementing
 <br>
 
-And then go to Airflow web UI and click on the DAG node, and look at the logs...
-![01-02-16](../../01-images/01-02-16.png)
-<br>
-
-Publish multiple messages to the Pub/Sub topic and explore DAG runs in the Airflow UI...
-![01-02-17](../../01-images/01-02-17.png)
-<br>
-
-## 9.0. Lets do a quick review of permissions for the major identities in scope for this demo
-
-Go to the Cloud Console and navigate to the IAM -> IAM & Admin and ensure you check the "Include Google Provided Role Grants". Screenshots of what you should expect are below. 
-
-## 9.0.1. The lab attendee permissions
-![01-02-06](../../01-images/01-02-06.png)
-<br>
-
-## 9.0.2. The UMSA permissions
-![01-02-07](../../01-images/01-02-07.png)
-<br>
-
-## 9.0.3. The Cloud Composer Service Agent Account permissions
-![01-02-08](../../01-images/01-02-08.png)
-<br>
-
-## 9.0.4. The various Google Managed Default Service Accounts
-![01-02-09](../../01-images/01-02-09.png)
-<br>
-
-
+<hr>
