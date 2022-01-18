@@ -415,7 +415,7 @@ gcloud projects add-iam-policy-binding ${PROJECT_ID} --member=serviceAccount:$UM
 
 b) To Dataflow developer
 ```
-gcloud projects add-iam-policy-binding ${PROJECT_ID} --member=serviceAccount:$UMSA_FQN --role=roles/dataflow.worker
+gcloud projects add-iam-policy-binding ${PROJECT_ID} --member=serviceAccount:$UMSA_FQN --role=roles/dataflow.developer
 ``` 
 
 <hr style="border:12px solid gray"> </hr>
