@@ -23,7 +23,8 @@ Note the project number.
 
 ## 1. Declare varibles 
 
-We will use these throughout the lab. Run the below in cloud shells coped to the new project you created-
+We will use these throughout the lab. <br>
+Run the below in cloud shells coped to the new project you created-
 ```
 PROJECT_ID=composer-2-playground
 PROJECT_NUMBER=508201578739 # Replace with yur project number
