@@ -3,7 +3,13 @@
 This module builds on the "Hello World" exercise, by adding the orchestration element to it.<br>
 Specifically, GCS bucket event driven orchestration.<br>
 
-FIRST and foremost - read this [GCP documentation](https://cloud.google.com/composer/docs/composer-2/triggering-with-gcf) to get an understanding of what we are about to attempt. Start with step 1, once done.
+FIRST and foremost - read this [GCP documentation](https://cloud.google.com/composer/docs/composer-2/triggering-with-gcf) to get an understanding of what we are about to attempt. Start with step 1, once done.<br>
+
+Here is a pictorial overview of this basic sample.
+
+![PubSub](09-images/HelloWorld-PubSub-EDO.png)
+
+<hr>
 
 ## 1.0. Create a GCS trigger bucket
 
