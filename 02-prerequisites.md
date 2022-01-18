@@ -259,7 +259,7 @@ cat > disableServiceAccountKeyCreation.yaml << ENDOFFILE
 name: projects/$PROJECT_ID/policies/compute.disableServiceAccountKeyCreation
 spec:
   rules:
-  - allowAll: true
+  - enforce: false
 ENDOFFILE
 
 gcloud org-policies set-policy disableServiceAccountKeyCreation.yaml
