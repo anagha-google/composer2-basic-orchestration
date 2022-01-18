@@ -2,6 +2,11 @@
 
 This module builds on the "Hello World" exercise, by adding the orchestration element to it.<br>
 Specifically, Pub/Sub message event driven orchestration.<br>
+Here is a pictorial overview of this basic sample.
+
+![PubSub](09-images/HelloWorld-PubSub-EDO.png)
+
+<hr>
 
 ## 1.0. Variables
 
