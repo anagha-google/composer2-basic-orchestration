@@ -36,7 +36,6 @@ AIRFLOW_URI=`gcloud composer environments describe $COMPOSER_ENV_NM \
 Validate:
 ```
 echo $AIRFLOW_URI
-https://e2XXXXXXX09e8bf9-dot-us-central1.composer.googleusercontent.com
 ```
 
 ## 3.0. Review the Airflow DAG executor script
