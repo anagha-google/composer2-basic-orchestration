@@ -276,7 +276,7 @@ spec:
 <hr style="border:12px solid gray"> </hr>
 <br>
 
-## 6. Create a Service Account
+## 6. Create a User Managed Service Account
 
 ```
 gcloud iam service-accounts create ${UMSA} \
