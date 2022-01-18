@@ -47,10 +47,11 @@ Navigate to the scripts directory in the git repo cloned in Cloud Shell-
 cd ~/composer2-basic-orchestration/00-scripts/rest-call
 ```
 
-Review the script, main.py, and check for where the following  -
+Review the script, main.py, and replace the DAG ID and Airflow URI as follows where the following  -
 ```
 
 ```
+
 ## 4. Generate the UMSA key file
 Note - this is for pure testing purposes.
 Prefer Workload Identity Federation over UMSA keys that are clearly a security risk
