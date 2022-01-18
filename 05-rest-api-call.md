@@ -9,8 +9,8 @@ Note: Our recommendation is to go with Cloud Pub/Sub message triggered orchestra
 ## 1. Prerequisites
 
 Completion of prior modules.
-
-<hr><br>
+<br>
+<hr>
 
 ## 2. Review the code 
 
