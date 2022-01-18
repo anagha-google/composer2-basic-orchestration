@@ -10,6 +10,8 @@ Note: Our recommendation is to go with Cloud Pub/Sub message triggered orchestra
 
 Completion of prior modules.
 
+<hr><br>
+
 ## 2. Review the code 
 
 Navigate to the scripts directory in the git repo cloned in Cloud Shell-
