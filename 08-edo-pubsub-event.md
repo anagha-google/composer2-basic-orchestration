@@ -7,8 +7,9 @@ Specifically, Pub/Sub message event driven orchestration.<br>
 
 In Cloud Shell, declare the following vars-
 ```
-PROJECT_ID=composer-2-playground
-PROJECT_NUMBER=508201578739 # Replace with yur project number
+ADMIN_FQ_UPN="admin@akhanolkar.altostrat.com" # Replace with your admin UPN
+PROJECT_NUMBER=508201578739 # Replace with your project number
+PROJECT_ID=composer-2-playground # Replace with your project ID if different
 
 UMSA="agni-sa"
 UMSA_FQN=$UMSA@$PROJECT_ID.iam.gserviceaccount.com
