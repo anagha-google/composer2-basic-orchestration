@@ -21,4 +21,5 @@ Once again, running this Python script from outside GCP, as a User Managed Servi
 
 
 <hr>
-This concludes the module.
+<br>
+This concludes the module. Proceed to the next module.
