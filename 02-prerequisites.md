@@ -452,7 +452,7 @@ gcloud projects add-iam-policy-binding $PROJECT_ID --member=serviceAccount:$UMSA
 <br>
 
 
-## 13. Provision Clone Composer 2, impersonating the UMSA identity
+## 13. Provision Cloud Composer 2, impersonating the UMSA identity
 
 Takes abour 30 minutes..
 ```
