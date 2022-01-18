@@ -20,3 +20,8 @@ Dive into the lab, starting with the [prerequisites module](02-prerequisites.md)
 ## 2. Dont forget to..
 
 Delete resources created after completing the lab.
+
+## Credits
+
+Author: Anagha Khanolkar, Google Cloud
+Collaborators: Jay O' Leary, Dr Thomas Abraham, Google Cloud
