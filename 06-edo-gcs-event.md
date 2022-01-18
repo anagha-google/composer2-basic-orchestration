@@ -7,7 +7,7 @@ FIRST and foremost - read this [GCP documentation](https://cloud.google.com/comp
 
 Here is a pictorial overview of this basic sample.
 
-![PubSub](09-images/HelloWorld-PubSub-EDO.png)
+![PubSub](09-images/HelloWorld-GCS-EDO.png)
 
 <hr>
 
