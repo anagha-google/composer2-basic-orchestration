@@ -219,7 +219,13 @@ variables set -- \
 umsa_fqn $UMSA_FQN
 ```
 
-
+8) User PubliC IPs
+```
+gcloud beta composer environments run $COMPOSER_ENV_NM \
+--location $LOCATION \
+variables set -- \
+use_public_ips_in_dataflow $USE_PUBLIC_IPS
+```
 
 ## 6. Deploy the DAG to Cloud Composer 2
 
@@ -240,10 +246,8 @@ Review the DAG deployment in the GCS bucket for the Cloud Composer environment.
 
 ## 7. Switch to the Cloud Composer Aiflow Web UI and view the DAG execution and check results
 
-You should see-
-```
-Blah
-```
+You should see the DAG listed as running...
+
 
 
 ## 8. Switch to the Cloud Dataflow UI and view the pipeline execution 
@@ -256,7 +260,7 @@ Switch to the Cloud Console, and navigate to Cloud Dataflow-
 <br>
 3. Explore the DAG execution logs
 <br>
-
+4. Once it completes, go to the BigQuery UI
 
 
 ## 9. Switch to the BigQuery UI and view the results
@@ -271,8 +275,11 @@ You should see the following results-
 4 records...properly parsed out.
 ```
 
+## 10. Switch back to the Airflow UI
 
-## 10. What's next?
+Note the successful DAG completion.
+
+## 11. What's next?
 
 Event-driven orchestration samples..
 1. GCS bucket event driven orchestration of the same DAG
