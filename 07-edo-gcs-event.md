@@ -18,6 +18,8 @@ COMPOSER_ENV_NM=cc2-agni
 LOCATION=us-central1
 
 GCF_TRIGGER_BUCKET_FQN=gs://$PROJECT_ID-gcs-edo-bucket
+
+DAG_ID=hello_world_dag
 ```
 
 b) Create a bucket
