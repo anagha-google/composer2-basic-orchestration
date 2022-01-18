@@ -30,14 +30,14 @@ DAG_ID=hello_world_dag
 
 b) Create a bucket
 ```
-gsutil mb -p $PROJECT_ID -c STANDARD -l $LOCATION -b on $GCF_TRIGGER_BUCKET_FQN
+gsutil mb -p $PROJECT_ID -c STANDARD -l $REGION -b on $GCF_TRIGGER_BUCKET_FQN
 ```
 
 ## 2.0. Get the Airflow Web URL
 
 ```
 AIRFLOW_URI=`gcloud composer environments describe $COMPOSER_ENV_NM \
-    --location $LOCATION \
+    --location $REGION \
     --format='value(config.airflowUri)'`
 ```
 
