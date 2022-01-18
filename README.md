@@ -13,8 +13,8 @@ This repo includes samples that cover such orchestration, impersonating a user m
 
 ### 2. Get started
 
-Dive into the lan, starting with the prerequisites module and run throuch module, in the exact same sequence as the module number.
+Dive into the lab, starting with the [prerequisites module](02-prerequisites.md) and run through module, in the exact same sequence as the module number.
 
-### 3. Dont forget to
+### 3. Dont forget to..
 
 Delete resources created after completing the lab.
