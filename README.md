@@ -15,7 +15,7 @@ The repository contains instructions, code, configuration & input files for basi
 
 ## 1. Get started
 
-Dive into the lab, starting with the [prerequisites module](02-prerequisites.md) and run through module, in the exact same sequence as the module number.
+Dive into the lab, starting with the [prerequisites module](02-prerequisites.md) and run through modules, in the exact same sequence as the module number.
 
 ## 2. Dont forget to..
 
