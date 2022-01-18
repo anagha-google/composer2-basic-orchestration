@@ -4,7 +4,7 @@ In this module, we will just review how to set the schedule for DAG execution ba
 
 ## Scheduling in the DAG code
 
-In the code fragment below, the last like sets the schedule. Apache Airflow will execute the DAG at the time interval set. Backfilling can be completed as well by setting DAG start date to a prior date.
+In the code fragment below, the last like sets the schedule. Apache Airflow will execute the DAG at the time interval set. Catchup can be completed as well by setting DAG start date to a prior date.
 
 #### 1. Basic schedule with time interval of every 15 minutes
 ```
@@ -15,8 +15,8 @@ with models.DAG(
         schedule_interval=datetime.timedelta(minutes=15)) as dag:
 ```
 
-#### 2. Backfill
-Start date, along with "catchup" boolean will backfill.
+#### 2. Vatchup
+Start date, along with ["catchup"](https://airflow.apache.org/docs/apache-airflow/stable/dag-run.html#catchup) boolean will complete the catch up DAG materialization.
 
 ```
 YESTERDAY = datetime.datetime.now() - datetime.timedelta(days=1)
