@@ -8,12 +8,16 @@ Specifically, Pub/Sub message event driven orchestration.<br>
 In Cloud Shell, declare the following vars-
 ```
 PROJECT_ID=composer-2-playground
+PROJECT_NUMBER=508201578739 # Replace with yur project number
+
 UMSA="agni-sa"
 UMSA_FQN=$UMSA@$PROJECT_ID.iam.gserviceaccount.com
+
 COMPOSER_ENV_NM=cc2-agni
 LOCATION=us-central1
 DAG_ID=hello_world_dag
-PUB_SUB_TRIGGER_TOPIC=$PROJECT_ID-hw-edo-topic
+
+PUB_SUB_TRIGGER_TOPIC=$PROJECT_ID-$PROJECT_NUMBER-hw-edo-topic
 ```
 
 <hr>
