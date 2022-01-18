@@ -6,11 +6,11 @@ The repository contains instructions, code, configuration & input files for basi
 
 <br><br>
 
-![Recommended](09-images/01-Recommended.png)
+![Recommended](09-images/02-Considerations.png)
 
 <br><br>
 
-![Considerations](09-images/02-Considerations.png)
+![Considerations](09-images/01-Recommended.png)
 
 
 ## 1. Get started
