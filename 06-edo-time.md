@@ -2,7 +2,7 @@
 
 In this module, we will just review how to set the schedule for DAG execution based on time, within the DAG code itself.
 
-## Scheduling in the DAG code
+## 1. Scheduling in the DAG code
 
 In the code fragment below, the last like sets the schedule. Apache Airflow will execute the DAG at the time interval set. Catchup can be completed as well by setting DAG start date to a prior date.
 
@@ -15,7 +15,7 @@ with models.DAG(
         schedule_interval=datetime.timedelta(minutes=15)) as dag:
 ```
 
-#### 2. Vatchup
+#### 2. Catchup
 Start date, along with ["catchup"](https://airflow.apache.org/docs/apache-airflow/stable/dag-run.html#catchup) boolean will complete the catch up DAG materialization.
 
 ```
@@ -28,6 +28,13 @@ default_args = {
 ```
 
 #### 3. Complete "Hello World" DAG
+
+Navigate in Cloud Shell to -
+```
+cd ~/composer2-basic-orchestration/00-scripts/hello-world-dag/4-dag-time-orchestrated
+```
+
+Review the script "hello-world-dag-scheduled.py" 
 
 ```
 # Docs: https://cloud.google.com/composer/docs/composer-2/quickstart
@@ -66,4 +73,32 @@ with models.DAG(
 ```
 <br>
 <hr>
+
+## 2. Deploy the DAG
+
+```
+# Navigate to the DAG directory
+cd ~/composer2-basic-orchestration/00-scripts/hello-world-dag/4-dag-time-orchestrated
+
+
+# Declare variables
+PROJECT_ID=composer-2-playground
+UMSA="agni-sa"
+UMSA_FQN=$UMSA@$PROJECT_ID.iam.gserviceaccount.com
+COMPOSER_ENV_NM=cc2-agni
+LOCATION=us-central1
+
+# Deploy DAG
+
+gcloud composer environments storage dags import \
+--environment $COMPOSER_ENV_NM  --location $LOCATION \
+--source hello-world-dag-scheduled.py \
+--impersonate-service-account $UMSA_FQN
+
+```
+
+## 3. Review the DAg execution in Airflow UI
+
+You should see the DAG start executing right away, and run periodically.
+
 This concludes the module
