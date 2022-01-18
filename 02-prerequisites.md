@@ -250,7 +250,27 @@ rm gcf-ingress-settings.yaml
 
 ```
 
-### 5.9. Validation
+ ### 5.9. Configure Service Account Key Creation
+ Try this only in Development for quick testing; Prefer Workload Identity Federation over UMSA keys.
+ ```
+rm restrictVpcPeering.yaml
+
+cat > restrictVpcPeering.yaml << ENDOFFILE
+name: projects/$PROJECT_ID/policies/compute.disableServiceAccountKeyCreation
+spec:
+  rules:
+  - allowAll: true
+ENDOFFILE
+
+gcloud org-policies set-policy disableServiceAccountKeyCreation.yaml
+
+rm disableServiceAccountKeyCreation.yaml
+
+```
+ 
+ constraints/iam.disableServiceAccountKeyCreation
+
+### 5.10. Validation
 To describe a particular constratint, run like the below describes the constraint for cloud function ingress setting for the author's project-
 ```
 gcloud org-policies describe \
@@ -269,6 +289,8 @@ spec:
   updateTime: '2022-01-09T06:11:08.512051Z'
   
  ```
+ 
+
 
 <hr style="border:12px solid gray"> </hr>
 <br>
