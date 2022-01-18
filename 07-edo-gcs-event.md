@@ -43,7 +43,7 @@ https://e2XXXXXXX09e8bf9-dot-us-central1.composer.googleusercontent.com
 
 In cloud shell, navigate to the scripts directory for the exercise-
 ```
-cd ~/$PROJECT_ID/00-scripts/hello-world-dag/00-scripts/2-dag-gcf-orchestrated/
+cd ~/00-scripts/hello-world-dag/00-scripts/2-dag-gcf-orchestrated/
 ```
 
 Open and review the script below-
