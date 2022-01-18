@@ -31,8 +31,6 @@ PROJECT_NUMBER=508201578739 # Replace with yur project number
 
 UMSA="agni-sa"
 UMSA_FQN=$UMSA@$PROJECT_ID.iam.gserviceaccount.com
-ADMIN_FQ_UPN="admin@akhanolkar.altostrat.com" # Replace with your admin UPN
-
 
 VPC_NM=composer-2-vnet
 VPC_FQN=projects/$PROJECT_ID/global/networks/$VPC_NM
@@ -41,6 +39,8 @@ SUBNET_NM=composer-2-snet
 REGION=us-central1
 
 COMPOSER_ENV_NM=cc2-agni
+
+ADMIN_FQ_UPN="admin@akhanolkar.altostrat.com" # Replace with your admin UPN
 ```
 
 
@@ -66,6 +66,8 @@ gcloud services enable dataflow.googleapis.com
 ## 3. Create a VPC & a subnet
 
 Launch cloud shell, change scope to the project you created (if required), and run the commands below to create the networking entities required for the hands on lab.
+
+#### 3.1. Grant yourself the security admin role so you can create firewall rk
 
 
 #### 3.1. Create a VPC
