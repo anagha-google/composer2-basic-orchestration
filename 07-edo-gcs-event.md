@@ -93,7 +93,7 @@ sed -i "s|AIRFLOW_URI_TO_BE_REPLACED|$AIRFLOW_URI|g" main.py
 sed -i "s|DAG_ID_TO_BE_REPLACED|$DAG_ID|g" main.py
 ```
 
-3. Validate
+3. Validate the replacement of the placeholders with your environment specific Airflow URI and DAG name
 ```
 cat main.py
 ```
