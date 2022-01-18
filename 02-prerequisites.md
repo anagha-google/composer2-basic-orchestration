@@ -16,6 +16,11 @@ This module includes all prerequisites for the orchesration lab-<br>
 [13. Clone this hands-on-lab's git repo](02-prerequisites.md#13-clone-this-hands-on-labs-git-repo)<br>
 ...
 
+## 0. Prerequisites
+Create a project called "composer-2-playground".<br>
+Note the project number.
+
+
 ## 1. Declare varibles 
 
 We will use these throughout the lab. Run the below-
