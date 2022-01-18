@@ -250,25 +250,6 @@ rm gcf-ingress-settings.yaml
 
 ```
 
- ### 5.9. Configure Service Account Key Creation
- Try this only in Development for quick testing; Prefer Workload Identity Federation over UMSA keys.
- ```
-rm disableServiceAccountKeyCreation.yaml
-
-cat > disableServiceAccountKeyCreation.yaml << ENDOFFILE
-name: projects/$PROJECT_ID/policies/iam.disableServiceAccountKeyCreation
-spec:
-  rules:
-  - enforce: false
-ENDOFFILE
-
-gcloud org-policies set-policy disableServiceAccountKeyCreation.yaml
-
-rm disableServiceAccountKeyCreation.yaml
-
-```
- 
-
 
 ### 5.10. Validation
 To describe a particular constratint, run like the below describes the constraint for cloud function ingress setting for the author's project-
