@@ -10,11 +10,15 @@ Completion of prior modules.
 
 In Cloud Shell paste the below-
 ```
+
+
 PROJECT_ID=composer-2-playground
 PROJECT_NUMBER=508201578739 # Replace with yur project number
 
 UMSA="agni-sa"
 UMSA_FQN=$UMSA@$PROJECT_ID.iam.gserviceaccount.com
+UMSA_KEY_FILE=~/umsa-key-file
+
 ADMIN_FQ_UPN="admin@akhanolkar.altostrat.com" # Replace with your admin UPN
 
 
@@ -48,4 +52,14 @@ cd ~/composer2-basic-orchestration/00-scripts/rest-call
 Review the script, main.py, and check for where the following  -
 ```
 
+```
+## 4. Generate the UMSA key file
+Note - this is for pure testing purposes.
+Prefer Workload Identity Federation over UMSA keys that are clearly a security risk
+
+```
+rm $UMSA_KEY_FILE
+
+gcloud iam service-accounts keys create $UMSA_KEY_FILE \
+    --iam-account=$UMSA@$PROJECT_ID.iam.gserviceaccount.com 
 ```
