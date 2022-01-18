@@ -52,13 +52,4 @@ Review the script, main.py, and replace the DAG ID and Airflow URI as follows wh
 
 ```
 
-## 4. Generate the UMSA key file
-Note - this is for pure testing purposes.
-Prefer Workload Identity Federation over UMSA keys that are clearly a security risk
-
-```
-rm $UMSA_KEY_FILE
-
-gcloud iam service-accounts keys create $UMSA_KEY_FILE \
-    --iam-account=$UMSA@$PROJECT_ID.iam.gserviceaccount.com 
-```
+## 4. WORK IN PROGRESS
