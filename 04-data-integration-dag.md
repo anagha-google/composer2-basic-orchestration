@@ -280,6 +280,5 @@ Note the successful DAG completion.
 
 ## 11. What's next?
 
-Event-driven orchestration samples..
-1. GCS bucket event driven orchestration of the same DAG
-2. Pub/Sub message event driven orchestration of the same DAG
+Lets look at event driven orhcestration of the Cloud Composer 2 "Hello World" DAG from earlier, in response to a Cloud Pub/Sub message.<br>
+Proceed to the [next module](05-edo-pubsub-event.md).
