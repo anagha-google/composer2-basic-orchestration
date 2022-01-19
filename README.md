@@ -26,4 +26,4 @@ Delete resources created after completing the lab.
 ## Credits
 
 Author: Anagha Khanolkar, Google Cloud<br>
-Collaborators: Jay O' Leary, Google Cloud
+Testing and feedback: Jay O' Leary, Google Cloud
