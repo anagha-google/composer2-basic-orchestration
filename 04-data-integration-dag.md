@@ -223,7 +223,7 @@ variables set -- \
 umsa_fqn $UMSA_FQN
 ```
 
-8) User PubliC IPs
+8) User Public IPs
 ```
 gcloud beta composer environments run $COMPOSER_ENV_NM \
 --location $LOCATION \
