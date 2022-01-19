@@ -271,7 +271,7 @@ Switch to the Cloud Console, and navigate to Cloud Dataflow-
 
 Switch to BigQuery in the Cloud Console and run the query-
 ```
-select * from `composer-2-playground.average_weather_ds.average_weather`
+select * from average_weather_ds.average_weather
 ```
 
 You should see the following results-
