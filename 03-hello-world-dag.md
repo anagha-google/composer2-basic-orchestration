@@ -95,4 +95,4 @@ INFO - Hello World!, DAG run ID =  2
 
 ## 5. What's next?
 
-We'll deploy a more realistic DAG that involves reading files from GCS, transforming via a Cloud Dataflow pipeline and loading into BigQuery, with the goal to run it as a user managed service account
+We'll deploy a more realistic DAG that involves reading files from GCS, transforming via a Cloud Dataflow pipeline and loading into BigQuery, with the goal to run it as a user managed service account. Proceed to the [next module](04-data-integration-dag.md).
