@@ -147,3 +147,7 @@ Go to Airflow web UI and click on the DAG node, and look at the logs...
 
 This concludes the module.
 
+## 10.0. What's next?
+
+Lets learn how to orchestrate a DAG using the Airflow scheduling functionality.<br>
+Proceed to the [next module.](07-edo-time.md)
