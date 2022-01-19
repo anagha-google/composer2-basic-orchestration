@@ -19,7 +19,7 @@ a) From cloud shell, navigate to the directory where the script is located
 cd ~/composer2-basic-orchestration/00-scripts/data-integration-dag/1-dag-base/
 ```
 
-b) Review the DAG Python script "ultra_basic_gcs_cdf_bq_dag.py" available [here](TODO)
+b) Review the DAG Python script "ultra_basic_gcs_cdf_bq_dag.py" available [here](00-scripts/data-integration-dag/1-dag-base/ultra_basic_gcs_cdf_bq_dag.py)
 
 It reads files from GCS, maps/transforms and loads the data into BigQuery, via Cloud Dataflow.
 It uses a Dataflow template available in Cloud storage for the same.
