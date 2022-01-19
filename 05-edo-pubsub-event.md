@@ -148,3 +148,8 @@ You should see the number of runs incrementing
 <br>
 
 <hr>
+
+## 10.0. What's next?
+
+Lets learn how to launch the Cloud Composer 2 "Hello World" DAG in response to a Cloud Storage object event.<br>
+Proceed to the [next module](06-edo-gcs-event.md).
