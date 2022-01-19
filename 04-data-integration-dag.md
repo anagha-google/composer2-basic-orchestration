@@ -60,7 +60,7 @@ From cloud shell, run the commands below.
 
 ### 3.1. Create the dataset
 ```
-bq --location=$LOCATION mk \
+bq --location=$REGION mk \
 --dataset \
 $PROJECT_ID:$BQ_DATASET_NM
 ```
@@ -78,7 +78,7 @@ location:GEOGRAPHY,average_temperature:INTEGER,month:STRING,inches_of_rain:NUMER
 
 ### 4.1. Create the bucket from cloud shell
 ```
-gsutil mb -c standard -p $PROJECT_ID -l $LOCATION $SRC_FILE_STAGING_BUCKET_PATH
+gsutil mb -c standard -p $PROJECT_ID -l $REGION $SRC_FILE_STAGING_BUCKET_PATH
 ```
 
 
