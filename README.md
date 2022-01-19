@@ -1,4 +1,4 @@
-# Orchestration Basics for Cloud Composer 2
+# Orchestration Basics with Cloud Composer 2
 
 The repository contains instructions, code, configuration & input files for basic hands on experience with Cloud Composer 2 and orchestrating DAGs impersonating a User Managed Service Account. The DAG is embarrassigly basic to maintain focus on orchestration and is based off of a sample in the public Google Cloud docs.<br>
 
