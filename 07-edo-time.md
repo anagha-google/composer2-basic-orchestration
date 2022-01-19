@@ -105,3 +105,9 @@ gcloud composer environments storage dags import \
 You should see the DAG start executing right away, and run periodically.
 
 This concludes the module
+
+
+## 4.0. What's next?
+
+Lets look at the code for invoking an Airflow DAG via a REST call.<br>
+Proceed to the [next module.](08-rest-api-call.md)
