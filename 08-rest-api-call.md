@@ -24,4 +24,7 @@ Once again, running this Python script from outside GCP, as a User Managed Servi
 
 <hr>
 <br>
-This concludes the module. Proceed to the next module.
+
+## 3.0. What's next?
+
+This concludes the lab. **Dont forget to delete the resources you created.**
