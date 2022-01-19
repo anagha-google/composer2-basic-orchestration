@@ -480,6 +480,7 @@ gcloud composer environments create ${COMPOSER_ENV_NM} \
 
 Once the environment is available (takes 30 minutes), browse through all the UIs of Cloud Composer as well as the Airflow UI.
 
+<hr>
 
 ## 14. Clone this hands-on-lab's git repo
 
@@ -488,7 +489,10 @@ In cloud shell, clone the repo-
 git clone https://github.com/anagha-google/composer2-basic-orchestration.git
 ```
 
+<hr>
+
 ## 15. What's next?
 
-In the next module, we will create a basic "Hello World" DAG to validate if our Composer environment is functional.
+In the [next module](03-hello-world-dag.md), we will create a basic "Hello World" DAG to validate if our Composer environment is functional.<br>
+
 
