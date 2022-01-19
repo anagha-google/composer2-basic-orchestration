@@ -1,7 +1,12 @@
 # About
 
 This module covers creating an ultra basic DAG that reads a CSV file from GCS, transforms it and loads it into BigQuery from Cloud Dataflow.<br>
-It is based off of a [sample in the GCP documentation](https://cloud.google.com/composer/docs/how-to/using/using-dataflow-template-operator), with some enhancements such as BYO VPC subnet, use a service account etc.
+It is based off of a [sample in the GCP documentation](https://cloud.google.com/composer/docs/how-to/using/using-dataflow-template-operator), with some enhancements such as BYO VPC subnet, use a service account etc.<br>
+
+Here is a pictorial overview-<br>
+
+![Basic-Pipeline](09-images/Basic-Data-Pipeline.png)
+<br>
 
 ### Goal
 Ensure permissions and configuration work for a data integration pipeline involving GCS, Cloud Dataflow, and BigQuery, so that we have a minimum viable pipeline for trying out event driven DAG execution.
