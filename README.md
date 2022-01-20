@@ -36,7 +36,11 @@ The following are the lab modules-<br>
 
 Delete resources created after completing the lab.
   
-## 6. References
+## 6. GCP Documentation References
+
+[Cloud Composer 2 Guide](https://cloud.google.com/composer/docs/composer-2/quickstart)<BR>
+[Triggering Cloud Composer 2 DAGs with Cloud Functions](https://cloud.google.com/composer/docs/composer-2/triggering-with-gcf)<BR>
+[Cloud Composer 2 - Dataflow Template Operator](https://cloud.google.com/composer/docs/how-to/using/using-dataflow-template-operator)
 
 ## 7. Credits
 
