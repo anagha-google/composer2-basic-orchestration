@@ -23,7 +23,7 @@ This is a community contribution. Please open an issue for any bugs you run into
 
 ## 4. Lab modules
 
-The following are the lab modules-
+The following are the lab modules-<br>
 [1. Prerequisites - provisioning, configuring, securing](02-prerequisites.md) <BR>
 [2. Validation of environment with a "Hello World" DAG](03-hello-world-dag.md) <BR>
 [3. Creation of a simple data integration pipeline](04-data-integration-dag.md) <BR>
