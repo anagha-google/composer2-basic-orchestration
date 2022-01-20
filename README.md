@@ -16,10 +16,12 @@ This is a community contribution. Please open an issue for any bugs you run into
 
 <br><br>
 
+## 3. Recommendation
+
 ![Considerations](09-images/01-Recommended.png)
 
 
-## 3. Lab modules
+## 4. Lab modules
 
 The following are the lab modules-
 [1. Prerequisites - provisioning, configuring, securing](02-prerequisites.md) <BR>
@@ -30,13 +32,13 @@ The following are the lab modules-
 [6. Time event based Cloud Composer 2 DAG execution](07-edo-time.md) <BR>
 [7. Code for direct REST API call to launch Cloud Composer 2 DAG](08-rest-api-call.md) <BR>
 
-## 4. Cleanup
+## 5. Cleanup
 
 Delete resources created after completing the lab.
   
-## 5. References
+## 6. References
 
-## 6. Credits
+## 7. Credits
 
 Author: Anagha Khanolkar, Google Cloud<br>
 Testing: Jay O' Leary, Dr. Thomas Abraham - Google Cloud
