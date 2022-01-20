@@ -2,8 +2,8 @@
 
 The repository contains instructions, code, configuration & input files for basic hands on experience with Cloud Composer 2 and orchestrating DAGs impersonating a User Managed Service Account. The DAG is embarrassigly basic to maintain focus on orchestration and is based off of a sample in the public Google Cloud docs.<br>
 
-This is a community contribution. Please open an issue for any bugs you run into.<br>
-Note for Google Customer Engineers: This lab covers setup in Argolis.<br>
+This is a community contribution and our goal was get a functionally adequate lab rolled out (versus excellent and automated) that demystifies provisioning, and event driven orchestration. Please open an issue for any bugs you run into. <br>
+Note for Google Customer Engineers: This lab covers setup in *Argolis*.<br>
 
 <hr>
 
