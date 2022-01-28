@@ -21,7 +21,7 @@ Note for Google Customer Engineers: This lab covers setup in *Argolis*.<br>
 <hr>
 
 ## 3. Recommendation
-
+For event driven DAg execution -
 ![Considerations](09-images/01-Recommended.png)
 
 <hr>
