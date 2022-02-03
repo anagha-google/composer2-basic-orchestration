@@ -4,7 +4,7 @@ This module builds on the "Hello World" exercise, by adding the orchestration el
 Specifically, Pub/Sub message event driven orchestration.<br>
 Here is a pictorial overview of this basic sample.
 
-![PubSub](09-images/Composer2-PubSub-EDO.png)
+![PubSub](09-images/HelloWorld-PubSub-EDO.png)
 
 <hr>
 
