@@ -29,8 +29,8 @@ This template accepts parameters for the transformation function, source and sin
 In cloud shell, lets define variables to use
 
 ```
-ADMIN_FQ_UPN="admin@akhanolkar.altostrat.com" # Replace with your admin UPN
-PROJECT_NUMBER=508201578739 # Replace with your project number
+ADMIN_FQ_UPN="xxxcom" # Replace with your admin UPN
+PROJECT_NUMBER=xxx # Replace with your project number
 PROJECT_ID=composer-2-playground # Replace with your project ID if different
 
 UMSA="agni-sa"
