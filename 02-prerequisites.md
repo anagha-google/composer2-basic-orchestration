@@ -34,6 +34,10 @@ Run the below in cloud shells coped to the new project you created-
 UMSA="agni-sa"
 UMSA_FQN=$UMSA@$PROJECT_ID.iam.gserviceaccount.com
 
+ADMIN_FQ_UPN="xx.com" # Replace with your admin UPN
+PROJECT_NUMBER=xxx # Replace with your project number
+PROJECT_ID=composer-2-playground # Replace with your project ID if different
+
 VPC_NM=composer-2-vnet
 VPC_FQN=projects/$PROJECT_ID/global/networks/$VPC_NM
 SUBNET_NM=composer-2-snet
@@ -42,9 +46,6 @@ REGION=us-central1
 
 COMPOSER_ENV_NM=cc2-agni
 
-ADMIN_FQ_UPN="xx.com" # Replace with your admin UPN
-PROJECT_NUMBER=xxx # Replace with your project number
-PROJECT_ID=composer-2-playground # Replace with your project ID if different
 ```
 
 
