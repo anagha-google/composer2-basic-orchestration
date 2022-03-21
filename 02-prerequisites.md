@@ -24,7 +24,11 @@ We will need this for the rest fo the lab.
 #### 2. Grant yourself security admin role<br>
 This is needed for the networking setup.<br>
 Go to Cloud IAM and through the UI, grant yourself security admin role.
-
+#### 3. Grant yourself Organization Policy Administrator at an Organization level<br>
+This is needed to set project level policies
+In the UI, set context to organization level (instead of project)
+Go to Cloud IAM and through the UI, grant yourself Organization Policy Administrator at an Organization level.
+Don't forget to set the project back to "composer-2-playground" in the UI.
 
 ## 1. Declare varibles 
 
