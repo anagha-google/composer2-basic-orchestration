@@ -250,7 +250,7 @@ rm restrictVpcPeering.yaml
 rm gcf-ingress-settings.yaml
 
 cat > gcf-ingress-settings.yaml << ENDOFFILE
-name: projects/$PROJECT_NUMBER/policies/cloudfunctions.allowedIngressSettings
+name: projects/$PROJECT_ID/policies/cloudfunctions.allowedIngressSettings
 spec:
   etag: CO2D6o4GEKDk1wU=
   rules:
